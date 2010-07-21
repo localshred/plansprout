@@ -1,0 +1,158 @@
+/*
+Theme Name: PlanSprout
+Theme URI: http://www.rand9.com/web/plansprout
+Description: PlanSprout Template
+Author: BJ Neilsen
+Author URI: http://www.rand9.com
+Version: 1.0
+
+[Table Of Contents] 
+	0- Reset
+	1- Global
+	2- Links
+	3- Headings
+	4- Header 
+	5- Navigation
+	6- Middle 
+	7- Forms
+	8- Extras
+	9- Footer 
+
+*/
+
+/* =0 Reset
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+/*@import url('reset.css');*/
+
+/* =1 Global
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+body {
+	line-height: 1;
+	font: normal 12px Helvetica, sans-serif;
+	vertical-align: top;
+	background: #fff;
+	color: #000;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+.align-left {
+	text-align: left;
+}
+.align-right {
+	text-align: right;
+}
+.align-center {
+	text-align:center;
+}
+.justify {
+	text-align:justify;
+}
+.hide {
+	display: none;
+}
+.clear {
+	clear: both;
+}
+.bold {
+	font-weight:bold;
+}
+.italic {
+	font-style:italic;
+}
+.underline {
+	border-bottom:1px solid;
+}
+.highlight {
+	background:#ffc;
+}
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+img.alignleft {
+	float:left;
+	margin:4px 10px 4px 0;
+}
+img.alignright {
+	float:right;
+	margin:4px 0 4px 10px;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.clearfix {
+	display: block;
+}
+html[xmlns] .clearfix {
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+
+/* =2 Links
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+a:link, a:visited {
+	color: #333;
+}
+a:hover {
+	color: #111;
+}
+a:active {
+	color: #111;
+}
+
+/* =3 Headings
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+h1 {
+	font: bold 2em "Times New Roman", Times, serif;
+}
+h2 {
+	font: bold 1.5em "Times New Roman", Times, serif;
+}
+h3 {
+	font: bold 1.2em Arial, Geneva, Helvetica, sans-serif;
+}
+h4 {
+	font: bold 1em Arial, Geneva, Helvetica, sans-serif;
+}
+h5 {
+	font: bold 0.9em Arial, Geneva, Helvetica, sans-serif;
+}
+
+/* =4 Header
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+/* =5 Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+/* =6 Middle
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+/* =7 Form
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+
+/* =8 Extra
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.idea-note
+{
+	margin-left: 50px;
+}
+
+/* =9 Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/

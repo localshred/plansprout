@@ -1,0 +1,15 @@
+<h3>New Note on <span class="note-idea-title"><%= idea.title %></span></h3>
+
+<% unless note.errors.empty? -%>
+	<div class="error" style="color: red;"><%= error_messages_for 'note' %></div>
+<% end -%>
+
+<% form_for [idea, note] do |f| -%>
+	<%= f.hidden_field 'idea_id' %>
+	<%= f.hidden_field 'user_id' %>
+	<p><%= label_tag 'title' %></p>
+	<p><%= f.text_field 'title' %></p>
+	<p><%= label_tag 'text', 'Note' %></p>
+	<p><%= f.text_area 'text', :size => '70x20' %></p>
+	<p><%= submit_tag submit_text %> or <%= link_to 'Cancel', cancel_link_path %></p>
+<% end -%>

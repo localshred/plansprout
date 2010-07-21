@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>PlanSprout.com</title>
+
+		<base href="" />
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+		<meta name="description" content="Long text description" />
+		<meta name="keywords" content="comma, separated, keywords" />
+		<meta name="robots" content="/robots.txt" />
+		<meta name="author" content="#" />
+		<meta name="copyright" content="#" />
+		<meta name="language" content="en" />
+	
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/stylesheets/application.all.css" type="text/css" media="screen, projection" />
+	
+    <script type="text/javascript" href="/javascripts/jquery.js"></script>
+    <script type="text/javascript" href="/javascripts/application.js"></script>
+	</head>
+
+	<body id="application-body">
+
+		<div id="wrapper">
+			
+			<div id="header">
+				<h1 id="logo" title="plansprout.com"><a href="/" title="Home">PlanSprout.com</a></h1>
+				<h4 id="tagline">Coming February 1, 2009</h4>
+				
+				<div id="main-menu">
+					<ul>
+						<li><%= link_to_unless_current 'Ideas', ideas_path %></li>
+						<% if logged_in? -%>
+						<li><%= link_to 'Logout', logout_path %></li>
+						<% else -%>
+						<li><%= link_to_unless_current 'Register', signup_path %></li>
+						<li><%= link_to_unless_current 'Login', login_path %></li>
+						<% end -%>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="content" class="cf">
+				<!-- <div id="sidbear">
+					<ul>
+						<li><a href="#" title=""></a></li>
+					</ul>
+				</div> -->
+				
+				<div id="guts">
+					<%= content_tag(:div, flash[:message], :class => "message") if flash[:message] -%>
+					<%= content_tag(:div, flash[:success], :class => "success") if flash[:success] -%>
+					<%= content_tag(:div, flash[:error], :class => "error") if flash[:error] -%>
+					<%= yield :layout -%>
+				</div>
+			</div>
+			
+			<div id="footer">
+				<p id="copyright">&copy; 2009 PlanSprout.com</p>
+			</div>
+			
+		</div>
+
+		<!-- place google analytics here -->
+		
+	</body>
+</html>

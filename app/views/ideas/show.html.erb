@@ -1,0 +1,32 @@
+
+<h2 id="idea-title"><a name="top"></a><%= @idea.title %></h2>
+<div id="idea-description"><%= nl2br @idea.description %></div>
+<p id="idea-creation"><%= time_and_creator(@idea) %></h2>
+
+<p class="action-links">Actions: 
+	<%= link_to 'Edit', edit_idea_path(@idea) %> |
+	<%= link_to "Delete", { :action => "destroy", :id => @idea.id }, :confirm => "Are you sure?", :method => :delete %>
+</p>
+
+<h3>Notes</h3>
+
+<% unless @notes.empty? -%>
+
+	<p class="note-count">You've scribbled <%= @notes.size %> note<%= @notes.size > 1 ? 's' : '' %> on this idea. <%= link_to 'Scribble another', new_idea_note_path(@idea) %>.</p>
+	
+	<% for note in @notes -%>
+		<div id="note-<%= note.id %>" class="idea-note">
+			<h4 class="note-title"><a name="note-<%= note.id %>"></a><%= note.title %></h4>
+			<p class="note-text"><%= nl2br note.text %></p>
+			<p class="note-creation"><%= time_and_creator(note) %></h2>
+			<p class="action-links">Actions: 
+				<%= link_to 'Edit', edit_idea_note_path({:id => note.id, :idea_id => @idea.id}) %> |
+				<%= link_to "Delete", { :controller => "notes", :action => "destroy", :id => note.id, :idea_id => @idea.id }, :confirm => "Are you sure?", :method => :delete %>
+			</p>
+			<p class="nav-links"><a href="#top" title="Back to Top">Top</a></p>
+		</div>
+	<% end -%>
+	
+<% else -%>
+	<p class="error">No notes scribbled here, why don't you <%= link_to 'scribble one', new_idea_note_path(@idea) %>?</p>
+<% end -%>

@@ -1,0 +1,11 @@
+<p><%= link_to 'I have a New Idea!', new_idea_path %></p>
+
+<% unless @ideas.empty? %>
+	<ul>
+	<% for idea in @ideas -%>
+		<li><%= link_to idea.title, idea_path(idea) %> &#151; <%= truncate idea.description, 100, "..." %></li>
+	<% end -%>
+	</ul>
+<% else %>
+	<p>No ideas found, so go ahead and <%= link_to 'make one!', new_idea_path %></p>
+<% end %>
